@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import cx from "../../utils/classnames";
 
-import "./Card.css";
+import "./Card.scss";
 
 class Card extends PureComponent {
   static propTypes = {

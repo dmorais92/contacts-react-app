@@ -4,7 +4,7 @@ import logo from '../logo.svg'
 import TEST_USERS from '../dev/users.json';
 import Card from './common/Card';
 
-import './UserList.css'
+import './UserList.scss'
 
 class UserList extends PureComponent {
   static propTypes = {

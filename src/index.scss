@@ -1,11 +1,13 @@
+@import './variables.scss';
+
 body {
-  background-color: #eee;
-  color: #616161;
+  background-color: $default-background;
+  color: $default-font-color;
   font-family: 'Roboto';
   font-size: 1em;
 }
 body a {
-  color: #616161;
+  color: $default-font-color;
 }
 body h1 {
   font-size: 3em;

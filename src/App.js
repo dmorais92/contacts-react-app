@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import Card from './components/common/Card';
 import UserList from './components/UserList';
 import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header>
-          <img src={logo} className="logo" alt="logo" />
+          <img src={logo} alt="logo" />
           <h1>
             Contacts React App
           </h1>
