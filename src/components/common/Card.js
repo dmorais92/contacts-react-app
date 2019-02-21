@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import cx from "../../utils/classnames";
+
 import "./Card.css";
 
 class Card extends PureComponent {
