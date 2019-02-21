@@ -4,6 +4,9 @@ body {
   font-family: 'Roboto';
   font-size: 1em;
 }
+body a {
+  color: #616161;
+}
 body h1 {
   font-size: 3em;
 }

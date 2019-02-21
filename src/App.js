@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './components/Card';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,6 +13,13 @@ class App extends Component {
             Contacts React App
           </h1>
         </header>
+        <footer>
+          <Card classes={["footer"]}>
+            <span>
+              made by <a href="https://github.com/dmorais92">David Morais</a> for CarTrack
+            </span>
+          </Card>
+        </footer>
       </div>
     );
   }

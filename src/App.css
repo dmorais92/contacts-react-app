@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -14,5 +14,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2vh;
 }
-
