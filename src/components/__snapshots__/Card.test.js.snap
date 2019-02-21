@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders multiple children 1`] = `
+<div
+  className="Card"
+>
+  <h1>
+    Testing with multiple children
+  </h1>
+  A short paragraph
+</div>
+`;
+
+exports[`renders vertically 1`] = `
+<div
+  className="Cardvertical"
+/>
+`;
+
+exports[`renders with extra classes 1`] = `
+<div
+  className="Card an array of classes"
+/>
+`;

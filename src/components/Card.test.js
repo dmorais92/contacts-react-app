@@ -17,17 +17,16 @@ it('renders vertically', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders children', () => {
+it('renders multiple children', () => {
   const component = renderer.create(
     <Card>
       <h1>Testing with multiple children</h1>
       A short paragraph
-      </Card>,
+    </Card>,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-
 
 it('renders with extra classes', () => {
   const component = renderer.create(
