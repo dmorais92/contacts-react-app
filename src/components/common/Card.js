@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import cx from "../utils/classnames";
+import cx from "../../utils/classnames";
 import "./Card.css";
 
 class Card extends PureComponent {
@@ -22,9 +22,9 @@ class Card extends PureComponent {
   };
 
   render() {
-    const { children, classes, vertical } = this.props;
+    const { children, classes, vertical, ...otherProps } = this.props;
     const classNames = [(vertical && "vertical") || "", ...classes];
-    return <div className={`Card${cx(classNames)}`}>{children}</div>;
+    return <div className={`Card${cx(classNames)}`} {...otherProps}>{children}</div>;
   }
 }
 
