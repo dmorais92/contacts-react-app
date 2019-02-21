@@ -4,12 +4,12 @@
   align-items: center;
 }
 
-.App-logo {
+.logo {
   height: 20vh;
   pointer-events: none;
 }
 
-.App-header {
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
