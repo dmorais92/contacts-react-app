@@ -14,7 +14,7 @@ export default function chunk(array, chunks) {
       if (chunk.length) {
         result.push(chunk);
       }
-      arrayItterator ++;
+      arrayItterator += i;
     }
   }
   return result;

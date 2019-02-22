@@ -25,6 +25,7 @@ class Card extends PureComponent {
   render() {
     const { children, classes, vertical, ...otherProps } = this.props;
     const classNames = [(vertical && "vertical") || null, ...classes];
+
     return <div className={`Card${cx(classNames)}`} {...otherProps}>{children}</div>;
   }
 }

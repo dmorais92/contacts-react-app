@@ -13,12 +13,12 @@ exports[`renders multiple children 1`] = `
 
 exports[`renders vertically 1`] = `
 <div
-  className="Cardvertical"
+  className="Card vertical"
 />
 `;
 
 exports[`renders with extra classes 1`] = `
 <div
-  className="Card an array of classes"
+  className="Card"
 />
 `;
