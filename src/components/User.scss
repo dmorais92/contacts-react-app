@@ -26,8 +26,18 @@
     .title-value {
       flex-flow: row nowrap;
       align-items: space-between;
+      a {
+        text-decoration: none;
+        background-color: #eee;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
       h5 {
         margin: 0.25em 0;
+      }
+      span {
+        margin: 0 0.25em;
       }
     }
   }
