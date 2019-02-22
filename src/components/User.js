@@ -8,7 +8,7 @@ import chunk from "../utils/chunk";
 
 class UserList extends PureComponent {
   static propTypes = {
-    users: PropTypes.objectOf({
+    user: PropTypes.objectOf({
       id: PropTypes.number,
       name: PropTypes.string,
       username: PropTypes.string,
@@ -19,10 +19,32 @@ class UserList extends PureComponent {
     })
   };
 
+  renderUserFields(fields) {
+    const { user } = this.props;
+    if (fields && fields.length) {
+      return(
+        chunk(fields, 3).map(section => (
+          <div className="user-info">
+            {section.map(field =>
+              (
+                <div className="info">
+                  <h5>{field}</h5>
+                  <span>{user[field]}</span>
+                </div>
+              )
+            )}
+          </div>
+        ))
+      )
+
+    }
+  }
+
   render() {
     const { user } = this.props;
-    const { name, id, username, email, address, ...userInfo } = user;
+    const { name, id, username, email, address, company, ...userInfo } = user;
     const extraFields = userInfo && Object.keys(userInfo);
+
 
     return (
       <Card vertical key={id} classes={["User"]}>
@@ -34,14 +56,7 @@ class UserList extends PureComponent {
             <span>{username}</span>
           </div>
         </div>
-        {extraFields.length &&
-          chunk(extraFields, 3).map(section => (
-            <div className="user-info">
-              {section.map(field => (
-                <span>{field}</span>
-              ))}
-            </div>
-          ))}
+        {this.renderUserFields(extraFields)}
       </Card>
     );
   }

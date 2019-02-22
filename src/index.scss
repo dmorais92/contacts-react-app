@@ -5,16 +5,22 @@ body {
   color: $default-font-color;
   font-family: 'Roboto';
   font-size: 1em;
-}
-body a {
-  color: $default-font-color;
-}
-body h1 {
-  font-size: 3em;
-}
-body h2 {
-  font-size: 2.5em;
-}
-body h3 {
-  font-size: 2em;
+  a {
+    color: $default-font-color;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+  h5 {
+    font-size: 1.25em;
+  }
 }
