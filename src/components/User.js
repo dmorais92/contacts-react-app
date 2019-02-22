@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import logo from "../logo.svg";
 import Card from "./common/Card";
+import Icon from "./common/Icon";
 
 import "./User.scss";
 import { chunk, capitalize } from "../utils";
@@ -73,7 +74,7 @@ class UserList extends PureComponent {
       return (
         <Card vertical key={id} classes={["User"]}>
           <div className="row">
-            <img src={logo} className="logo" alt="logo" />
+            <Icon icon="user" size="m"/>
             <div className="main-info">
               <h3>{name}</h3>
               <span>{email}</span>

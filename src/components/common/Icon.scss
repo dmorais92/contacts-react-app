@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.Icon {
+  margin: 5px;
+  &.primary {
+    color: #b3e5fc;
+  }
+  &.secondary {
+    color:  aquamarine;
+  }
+  &.xl {
+    font-size: 20vw;
+  }
+  &.l {
+    font-size: 20vh;
+  }
+  &.m {
+    font-size: 10vh;
+  }
+  &.s {
+    font-size: 2em;
+  }
+}
