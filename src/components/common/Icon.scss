@@ -3,10 +3,10 @@
 .Icon {
   margin: 0.25vh 2vw;
   &.primary {
-    color: #b3e5fc;
+    color: $primary-icon-color;
   }
   &.secondary {
-    color:  $default-font-color;
+    color:  $secondary-icon-color;
   }
   &.xl {
     font-size: 20vw;

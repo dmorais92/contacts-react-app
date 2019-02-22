@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment } from "react";
 import PropTypes from "prop-types";
 import Card from "./common/Card";
 import Icon from "./common/Icon";
+import Button from "./common/Button";
 
 import "./User.scss";
 import { chunk, capitalize } from "../utils";
@@ -77,11 +78,14 @@ class UserList extends PureComponent {
     return (
       <Icon
         icon={expanded ? "close" : "open"}
-        onClick={() =>
-          !console.log(expanded) && this.setState({ expanded: !expanded })
-        }
+        onClick={() => this.setState({ expanded: !expanded })}
       />
     );
+  }
+
+  get phoneNumber() {
+    const { user } = this.props;
+    return user.phone.replace(/\D/g,'');
   }
 
   render() {
@@ -90,7 +94,6 @@ class UserList extends PureComponent {
     if (user) {
       const { name, id, username, email, address, company, ...userInfo } = user;
       const extraFields = userInfo && Object.keys(userInfo);
-
       return (
         <Card vertical key={id} classes={["User"]}>
           <div className="row">
@@ -106,6 +109,14 @@ class UserList extends PureComponent {
             <Fragment>
               {this.renderUserFields(extraFields)}
               {this.renderUserFields(Object.keys(address), address)}
+                <Button classes={["contact-button"]}>
+              <a href={`tel:${this.phoneNumber}`}>
+                  {
+                    user.phone
+                  }
+                  <Icon icon="mobile" size="s" color="secondary"/>
+              </a>
+                </Button>
             </Fragment>
           ) : (
             ""

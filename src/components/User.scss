@@ -17,6 +17,17 @@
       }
     }
   }
+  .contact-button {
+    align-self: flex-end;
+    margin: 1vh 1vw;
+    a {
+      padding: 5px;
+    }
+    i {
+      vertical-align: middle;
+    }
+  }
+
   .info-section {
     flex-flow: column nowrap;
     align-items: flex-end;
