@@ -1,18 +1,34 @@
+@import '../variables.scss';
+
 .User {
   .row {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-      .logo {
-        height: 10vh;
+    .logo {
+      height: 10vh;
+    }
+    .main-info {
+      display: flex;
+      flex-flow: column wrap;
+      h3 {
+        margin: 0;
       }
-      .main-info {
-        display: flex;
-        flex-flow: column wrap;
-        h3 {
-          margin: 0;
-        }
+    }
+  }
+  .info-section {
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    border-bottom: 1px solid $secondary-font-color;
+    margin-left: 10vh;
+    min-width: 60%;
+    .title-value {
+      flex-flow: row nowrap;
+      align-items: space-between;
+      h5 {
+        margin: 0.25em 0;
       }
+    }
   }
 }

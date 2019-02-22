@@ -8,7 +8,7 @@ import chunk from "../utils/chunk";
 
 class UserList extends PureComponent {
   static propTypes = {
-    user: PropTypes.objectOf({
+    user: PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string,
       username: PropTypes.string,
@@ -24,10 +24,10 @@ class UserList extends PureComponent {
     if (fields && fields.length) {
       return(
         chunk(fields, 3).map(section => (
-          <div className="user-info">
+          <div className="info-section" key={`${fields}-${section}`}>
             {section.map(field =>
               (
-                <div className="info">
+                <div className="title-value" key={`${field}-${user[field]}`}>
                   <h5>{field}</h5>
                   <span>{user[field]}</span>
                 </div>
