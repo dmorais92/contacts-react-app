@@ -5,8 +5,8 @@ import "./Icon.scss";
 
 class Icon extends PureComponent {
   static propTypes = {
-    icon: PropTypes.oneOf(["mobile", "geo", "user", "logo"]),
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
+    icon: PropTypes.oneOf(["mobile", "geo", "user", "logo", "open", "close"]),
+    size: PropTypes.oneOf(["s", "m", "l", "xl", "xs"]),
     color: PropTypes.oneOf(["primary", "secondary"])
   };
 
@@ -15,18 +15,22 @@ class Icon extends PureComponent {
   };
 
   render() {
-    const { icon, size="m", color="primary" } = this.props;
+    const { icon, size = "m", color = "primary", ...otherProps } = this.props;
     switch (icon) {
       case "user":
-        return <i className={`Icon far fa-user ${size} ${color}`} />;
+        return <i className={`Icon far fa-user ${size} ${color}`} {...otherProps}/>;
       case "logo":
-        return <i className={`Icon fas fa-user-circle ${size} ${color}`} />;
+        return <i className={`Icon fas fa-user-circle ${size} ${color}`} {...otherProps}/>;
       case "geo":
-        return <i className={`Icon fas fa-location-arrow ${size} ${color}`} />;
+        return <i className={`Icon fas fa-location-arrow ${size} ${color}`} {...otherProps}/>;
+      case "open":
+        return <i className={`Icon fas fa-angle-down ${size} ${color}`} {...otherProps}/>;
+      case "close":
+        return <i className={`Icon fas fa-angle-up ${size} ${color}`} {...otherProps}/>;
       case "mobile":
-        return <i className={`Icon fas fa-phone ${size} ${color}`} />;
+        return <i className={`Icon fas fa-phone ${size} ${color}`} {...otherProps}/>;
       default:
-        return <i className={`Icon far fa-user ${size} ${color}`} />;
+        return <i className={`Icon far fa-user ${size} ${color}`} {...otherProps}/>;
     }
   }
 }

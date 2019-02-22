@@ -4,11 +4,14 @@
   .row {
     display: flex;
     flex-flow: row nowrap;
+    width: 100%;
+
     justify-content: space-between;
     align-items: center;
     .main-info {
       display: flex;
       flex-flow: column wrap;
+      flex: 0.5;
       h3 {
         margin: 0;
       }
@@ -18,7 +21,7 @@
     flex-flow: column nowrap;
     align-items: flex-end;
     border-bottom: 1px solid $secondary-font-color;
-    margin-left: 10vh;
+    margin-left: 10vw;
     min-width: 60%;
     .title-value {
       flex-flow: row nowrap;
@@ -32,6 +35,7 @@
       }
       h5 {
         margin: 0.25em 0;
+        width: fit-content;
       }
       span {
         margin: 0 0.25em;

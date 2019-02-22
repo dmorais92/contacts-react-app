@@ -23,96 +23,11 @@ exports[`renders a user 1`] = `
         Bret
       </span>
     </div>
+    <i
+      className="Icon fas fa-angle-down m primary"
+      onClick={[Function]}
+    />
   </div>
-  <div
-    className="info-section"
-  >
-    <div
-      className="title-value"
-    >
-      <h5>
-        Phone
-      </h5>
-      <span>
-        1-770-736-8031 x56442
-      </span>
-    </div>
-    <div
-      className="title-value"
-    >
-      <h5>
-        Website
-      </h5>
-      <span>
-        hildegard.org
-      </span>
-    </div>
-  </div>
-  <div
-    className="info-section"
-  >
-    <div
-      className="title-value"
-    >
-      <h5>
-        Street
-      </h5>
-      <span>
-        Kulas Light
-      </span>
-    </div>
-    <div
-      className="title-value"
-    >
-      <h5>
-        Suite
-      </h5>
-      <span>
-        Apt. 556
-      </span>
-    </div>
-    <div
-      className="title-value"
-    >
-      <h5>
-        City
-      </h5>
-      <span>
-        Gwenborough
-      </span>
-    </div>
-  </div>
-  <div
-    className="info-section"
-  >
-    <div
-      className="title-value"
-    >
-      <h5>
-        Zipcode
-      </h5>
-      <span>
-        92998-3874
-      </span>
-    </div>
-    <div
-      className="geo-fields title-value"
-    >
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=-37.3159,81.1496"
-        target="blank"
-      >
-        <h5>
-          Location
-        </h5>
-        <span>
-          -37.3159
-          º, 
-          81.1496
-          º
-        </span>
-      </a>
-    </div>
-  </div>
+  
 </div>
 `;

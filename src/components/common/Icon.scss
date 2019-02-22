@@ -6,7 +6,7 @@
     color: #b3e5fc;
   }
   &.secondary {
-    color:  aquamarine;
+    color:  $default-font-color;
   }
   &.xl {
     font-size: 20vw;
@@ -20,4 +20,11 @@
   &.s {
     font-size: 2em;
   }
+  &.xs {
+    font-size: 1.5em;
+  }
+}
+.fa-angle-up,
+.fa-angle-down {
+  cursor: pointer;
 }
