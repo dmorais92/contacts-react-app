@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./Icon.scss";
 
-class Card extends PureComponent {
+class Icon extends PureComponent {
   static propTypes = {
     icon: PropTypes.oneOf(["mobile", "geo", "user", "logo"]),
     size: PropTypes.oneOf(["s", "m", "l", "xl"]),
@@ -31,4 +31,4 @@ class Card extends PureComponent {
   }
 }
 
-export default Card;
+export default Icon;

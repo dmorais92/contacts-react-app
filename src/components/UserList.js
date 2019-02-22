@@ -13,7 +13,6 @@ class UserList extends PureComponent {
 
     return (
       <Fragment>
-        <h2>Contact List</h2>
         {
           users && users.length ?
             users.map(user => <User user={user} key={user.name}/>)

@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import logo from "../logo.svg";
 import Card from "./common/Card";
 import Icon from "./common/Icon";
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from './components/common/Card';
+import Icon from './components/common/Icon';
 import UserList from './components/UserList';
-import logo from './logo.svg';
 
 import './App.scss';
 
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <img src={logo} alt="logo" />
+          <Icon size="xl" icon="logo"/>
           <h1>
             Contacts React App
           </h1>
