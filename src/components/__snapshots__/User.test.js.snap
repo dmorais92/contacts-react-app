@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a user 1`] = `
+<div
+  className="Card vertical User"
+>
+  <div
+    className="row"
+  >
+    <img
+      alt="logo"
+      className="logo"
+      src="logo.svg"
+    />
+    <div
+      className="main-info"
+    >
+      <h3>
+        Leanne Graham
+      </h3>
+      <span>
+        Sincere@april.biz
+      </span>
+      <span>
+        Bret
+      </span>
+    </div>
+  </div>
+  <div
+    className="info-section"
+  >
+    <div
+      className="title-value"
+    >
+      <h5>
+        phone
+      </h5>
+      <span>
+        1-770-736-8031 x56442
+      </span>
+    </div>
+    <div
+      className="title-value"
+    >
+      <h5>
+        website
+      </h5>
+      <span>
+        hildegard.org
+      </span>
+    </div>
+  </div>
+</div>
+`;
