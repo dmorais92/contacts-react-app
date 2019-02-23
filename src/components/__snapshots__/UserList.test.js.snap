@@ -2,9 +2,24 @@
 
 exports[`renders a list of users 1`] = `
 Array [
-  <input
-    className="Search"
-  />,
+  <div
+    className="SearchContainer"
+  >
+    <div
+      className="search-label"
+    >
+      <i
+        className="Icon fas fa-search xs primary"
+      />
+      <h4>
+        Search
+      </h4>
+    </div>
+    <input
+      className="Search"
+      onChange={[Function]}
+    />
+  </div>,
   <div
     className="Card vertical User"
   >

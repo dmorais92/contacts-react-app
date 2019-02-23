@@ -5,7 +5,7 @@ import "./Icon.scss";
 
 class Icon extends PureComponent {
   static propTypes = {
-    icon: PropTypes.oneOf(["mobile", "geo", "user", "logo", "open", "close"]),
+    icon: PropTypes.oneOf(["mobile", "geo", "user", "logo", "open", "close", "search"]),
     size: PropTypes.oneOf(["s", "m", "l", "xl", "xs"]),
     color: PropTypes.oneOf(["primary", "secondary"])
   };
@@ -19,6 +19,8 @@ class Icon extends PureComponent {
     switch (icon) {
       case "user":
         return <i className={`Icon far fa-user ${size} ${color}`} {...otherProps}/>;
+      case "search":
+        return <i className={`Icon fas fa-search ${size} ${color}`} {...otherProps}/>;
       case "logo":
         return <i className={`Icon fas fa-user-circle ${size} ${color}`} {...otherProps}/>;
       case "geo":
@@ -30,7 +32,7 @@ class Icon extends PureComponent {
       case "mobile":
         return <i className={`Icon fas fa-phone ${size} ${color}`} {...otherProps}/>;
       default:
-        return <i className={`Icon far fa-user ${size} ${color}`} {...otherProps}/>;
+        return <i className={`Icon ${icon} ${size} ${color}`} {...otherProps}/>;
     }
   }
 }

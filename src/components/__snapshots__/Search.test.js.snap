@@ -1,13 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders multiple children 1`] = `
-<input
-  className="Search"
-/>
+<div
+  className="SearchContainer"
+>
+  <div
+    className="search-label"
+  >
+    <i
+      className="Icon fas fa-search xs primary"
+    />
+    <h4>
+      Search
+    </h4>
+  </div>
+  <input
+    className="Search"
+    onChange={[Function]}
+  >
+    <h1>
+      Testing with multiple children
+    </h1>
+    A short paragraph
+  </input>
+</div>
 `;
 
 exports[`renders with extra classes 1`] = `
-<input
-  className="Search an array of classes"
-/>
+<div
+  className="SearchContainer"
+>
+  <div
+    className="search-label"
+  >
+    <i
+      className="Icon fas fa-search xs primary"
+    />
+    <h4>
+      Search
+    </h4>
+  </div>
+  <input
+    className="Search an array of classes"
+    onChange={[Function]}
+  />
+</div>
 `;

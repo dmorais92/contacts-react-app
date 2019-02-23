@@ -1,31 +1,32 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import cx from "../utils/classnames";
+import Icon from "./common/Icon";
 
 import "./Search.scss";
 
 class Search extends PureComponent {
   static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.object,
-      PropTypes.string,
-      PropTypes.element,
-      PropTypes.array
-    ]),
-    classes: PropTypes.array
+    classes: PropTypes.array,
+    onChange: PropTypes.func,
   };
 
   static defaultProps = {
-    children: null,
     classes: []
   };
 
   render() {
-    const { children, classes, ...otherProps } = this.props;
+    const { classes, onChange, ...otherProps } = this.props;
     const classNames = [...classes];
 
     return (
-      <input className={`Search${cx(classNames)}`} {...otherProps}/>
+      <div className="SearchContainer">
+        <div className="search-label">
+          <Icon icon="search" size="xs" />
+          <h4>Search</h4>
+        </div>
+        <input className={`Search${cx(classNames)}`} onChange={e => onChange(e)}{...otherProps} />
+      </div>
     );
   }
 }
