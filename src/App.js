@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <Icon size="xl" icon="logo"/>
+          <Icon size="l" icon="logo"/>
           <h1>
             Contacts React App
           </h1>
