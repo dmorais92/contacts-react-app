@@ -1,4 +1,4 @@
-const ACTION_TYPES = {
+export const ACTION_TYPES = {
   USERS: {
     GET_USERS: 'GET_USERS',
     GET_USERS_FAILED: 'GET_USERS_FAILED',
