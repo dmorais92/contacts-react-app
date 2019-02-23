@@ -2,6 +2,9 @@
 
 exports[`renders a list of users 1`] = `
 Array [
+  <input
+    className="Search"
+  />,
   <div
     className="Card vertical User"
   >

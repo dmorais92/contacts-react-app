@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from "react";
 import PropTypes from "prop-types";
 import User from "./User";
+import Search from "./Search";
 
 class UserList extends PureComponent {
   static propTypes = {
@@ -18,6 +19,7 @@ class UserList extends PureComponent {
 
     return (
       <Fragment>
+        <Search/>
         {
           users && users.length ?
             users.map(user => <User user={user} key={user.name}/>)

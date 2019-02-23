@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders multiple children 1`] = `
+<input
+  className="Search"
+/>
+`;
+
+exports[`renders with extra classes 1`] = `
+<input
+  className="Search an array of classes"
+/>
+`;

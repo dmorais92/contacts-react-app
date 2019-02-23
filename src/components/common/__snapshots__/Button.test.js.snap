@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders multiple children 1`] = `
-<div
-  className="Card"
+<button
+  className="Button"
 >
   <h1>
     Testing with multiple children
   </h1>
   A short paragraph
-</div>
+</button>
 `;
 
 exports[`renders with extra classes 1`] = `
-<div
-  className="Card"
+<button
+  className="Button an array of classes"
 />
 `;
