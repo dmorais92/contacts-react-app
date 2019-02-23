@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a list of users 1`] = `
+Array [
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Leanne Graham
+        </h3>
+        <span>
+          Sincere@april.biz
+        </span>
+        <span>
+          Bret
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Ervin Howell
+        </h3>
+        <span>
+          Shanna@melissa.tv
+        </span>
+        <span>
+          Antonette
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Clementine Bauch
+        </h3>
+        <span>
+          Nathan@yesenia.net
+        </span>
+        <span>
+          Samantha
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Patricia Lebsack
+        </h3>
+        <span>
+          Julianne.OConner@kory.org
+        </span>
+        <span>
+          Karianne
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Chelsey Dietrich
+        </h3>
+        <span>
+          Lucio_Hettinger@annie.ca
+        </span>
+        <span>
+          Kamren
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Mrs. Dennis Schulist
+        </h3>
+        <span>
+          Karley_Dach@jasper.info
+        </span>
+        <span>
+          Leopoldo_Corkery
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Kurtis Weissnat
+        </h3>
+        <span>
+          Telly.Hoeger@billy.biz
+        </span>
+        <span>
+          Elwyn.Skiles
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Nicholas Runolfsdottir V
+        </h3>
+        <span>
+          Sherwood@rosamond.me
+        </span>
+        <span>
+          Maxime_Nienow
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Glenna Reichert
+        </h3>
+        <span>
+          Chaim_McDermott@dana.io
+        </span>
+        <span>
+          Delphine
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+  <div
+    className="Card vertical User"
+  >
+    <div
+      className="row"
+    >
+      <i
+        className="Icon far fa-user m primary"
+      />
+      <div
+        className="main-info"
+      >
+        <h3>
+          Clementina DuBuque
+        </h3>
+        <span>
+          Rey.Padberg@karina.biz
+        </span>
+        <span>
+          Moriah.Stanton
+        </span>
+      </div>
+      <i
+        className="Icon fas fa-angle-down m primary"
+        onClick={[Function]}
+      />
+    </div>
+    
+  </div>,
+]
+`;

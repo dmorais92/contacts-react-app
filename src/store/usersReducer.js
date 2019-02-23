@@ -1,8 +1,8 @@
-import ACTION_TYPES from "./actions";
+import {ACTION_TYPES} from "./actions";
 
 export default function users(
   state = {
-    users: [],
+    userList: [],
     isFetchingUsers: false,
     error: ""
   },
@@ -18,7 +18,7 @@ export default function users(
       return {
         ...state,
         isFetchingUsers: false,
-        users: action.users
+        userList: action.users
       };
     case ACTION_TYPES.USERS.GET_USERS_FAIL:
       return {

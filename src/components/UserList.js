@@ -14,7 +14,7 @@ class UserList extends PureComponent {
   }
 
   render() {
-    const {users} = this.props;
+    const {users, isFetchingUsers} = this.props;
 
     return (
       <Fragment>
@@ -22,7 +22,7 @@ class UserList extends PureComponent {
           users && users.length ?
             users.map(user => <User user={user} key={user.name}/>)
           :
-            <h3>No contacts found</h3>
+            <h3>{isFetchingUsers ? 'Loading contacts...' : 'No contacts found'}</h3>
         }
       </Fragment>
     );
