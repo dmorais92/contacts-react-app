@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from './components/common/Card';
 import Icon from './components/common/Icon';
-import UserList from './components/UserList';
+import UserList from './containers/Users';
 
 import './App.scss';
 

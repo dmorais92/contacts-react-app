@@ -10,12 +10,12 @@ export const getUsers = () => ({
   type: ACTION_TYPES.USERS.GET_USERS,
 });
 
-export const getUsersSucess = users => ({
+export const getUsersSuccess = users => ({
   type: ACTION_TYPES.USERS.GET_USERS_SUCCESS,
   users,
 });
 
-export const getUsersFaield = (e) => ({
+export const getUsersFailed = (e) => ({
   type: ACTION_TYPES.USERS.GET_USERS_FAILED,
   error: e
 })
