@@ -4,7 +4,8 @@ export default function users(
   state = {
     userList: [],
     isFetchingUsers: false,
-    error: ""
+    error: '',
+    query: '',
   },
   action
 ) {
@@ -26,6 +27,11 @@ export default function users(
         isFetchingUsers: false,
         error: action.error,
       };
+      case ACTION_TYPES.USERS.SEARCH_USERS:
+        return {
+          ...state,
+          query: action.query,
+        };
     default:
       return state;
   }

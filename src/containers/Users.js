@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { getUsers, getUsersFailed, getUsersSuccess } from "../store/actions";
+import { getUsers, getUsersFailed, getUsersSuccess, searchUsers } from "../store/actions";
 import UserList from "../components/UserList";
 import api from "../api";
 
@@ -14,17 +14,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getUsers: () => {
       dispatch(getUsers());
-      try {
         api
           .get("/users")
           .then(res => res && res.data && dispatch(getUsersSuccess(res.data)))
           .catch(() => {
-            throw new Error("Could not retrieve contacts");
+            dispatch(getUsersFailed("Could not retrieve contacts"));
           });
-      } catch (e) {
-        dispatch(getUsersFailed(e));
-      }
-    }
+    },
+    searchUsers: val => dispatch(searchUsers(val)),
   };
 };
 

@@ -15,11 +15,11 @@ class UserList extends PureComponent {
   }
 
   render() {
-    const {users, isFetchingUsers} = this.props;
+    const {users, isFetchingUsers, searchUsers} = this.props;
 
     return (
       <Fragment>
-        <Search/>
+        <Search onChange={(e) => searchUsers(e.target.value)}/>
         {
           users && users.length ?
             users.map(user => <User user={user} key={user.name}/>)
