@@ -76,10 +76,10 @@ class User extends Component {
   }
 
   onKeyDown(e) {
-    const { user, keyboardControls } = this.props;
+    const { keyboardControls } = this.props;
     if (e.keyCode === 13) {
       this.state.expanded
-        ? console.log("Calling", user.phone)
+        ? window.open(`tel:${this.phoneNumber}`, "_blank")
         : this.setState({ expanded: true });
     }
     if (e.keyCode === 37) {
@@ -89,9 +89,11 @@ class User extends Component {
       this.setState({expanded: true})
     }
     if (e.keyCode === 40) {
+      e.preventDefault();
       keyboardControls.selectNextUser();
     }
     if (e.keyCode === 38) {
+      e.preventDefault();
       keyboardControls.selectPreviousUser();
     }
   }

@@ -30,6 +30,7 @@ class Card extends PureComponent {
   componentDidUpdate() {
     if (this.props.selected) {
       this.cardRef.current.focus();
+      window.scrollTo(0, this.cardRef.current.offsetTop)
     }
   }
 
