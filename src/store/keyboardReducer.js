@@ -40,7 +40,7 @@ export default function users(
     case ACTION_TYPES.KEYBOARD.SELECT_USER:
       return {
         ...state,
-        selectedUser: action.index,
+        selectedUser: action.index || null,
       }
     default:
       return state;

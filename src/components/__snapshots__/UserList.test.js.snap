@@ -22,6 +22,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -51,6 +55,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -80,6 +88,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -109,6 +121,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -138,6 +154,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -167,6 +187,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -196,6 +220,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -225,6 +253,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -254,6 +286,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"
@@ -283,6 +319,10 @@ Array [
   </div>,
   <div
     className="Card vertical User"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    selected={false}
+    tabIndex="0"
   >
     <div
       className="row"

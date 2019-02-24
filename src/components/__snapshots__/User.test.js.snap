@@ -3,6 +3,7 @@
 exports[`renders a user 1`] = `
 <div
   className="Card vertical User"
+  onKeyDown={[Function]}
 >
   <div
     className="row"

@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import Card from "./common/Card";
 import Icon from "./common/Icon";
@@ -13,6 +13,7 @@ const renderGeoFields = coords => {
     (lat && lng && (
       <div className="geo-fields title-value" key="geo">
         <a
+          tabIndex="-1"
           target="blank"
           href={`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`}
         >
@@ -30,7 +31,7 @@ const renderGeoFields = coords => {
   );
 };
 
-class UserList extends PureComponent {
+class User extends Component {
   static propTypes = {
     user: PropTypes.shape({
       id: PropTypes.number,
@@ -40,7 +41,8 @@ class UserList extends PureComponent {
       phone: PropTypes.string,
       website: PropTypes.string,
       company: PropTypes.object
-    })
+    }),
+    selected: PropTypes.bool,
   };
 
   constructor(props) {
@@ -73,6 +75,27 @@ class UserList extends PureComponent {
     }
   }
 
+  onKeyDown(e) {
+    const { user, keyboardControls } = this.props;
+    if (e.keyCode === 13) {
+      this.state.expanded
+        ? console.log("Calling", user.phone)
+        : this.setState({ expanded: true });
+    }
+    if (e.keyCode === 37) {
+      this.setState({expanded: false})
+    }
+    if (e.keyCode === 39) {
+      this.setState({expanded: true})
+    }
+    if (e.keyCode === 40) {
+      keyboardControls.selectNextUser();
+    }
+    if (e.keyCode === 38) {
+      keyboardControls.selectPreviousUser();
+    }
+  }
+
   renderExpandButton() {
     const { expanded } = this.state;
     return (
@@ -85,17 +108,25 @@ class UserList extends PureComponent {
 
   get phoneNumber() {
     const { user } = this.props;
-    return user.phone.replace(/\D/g,'');
+    return user.phone.replace(/\D/g, "");
   }
 
   render() {
-    const { user } = this.props;
+    const { user, tabIndex, onFocus, selected } = this.props;
 
     if (user) {
       const { name, id, username, email, address, company, ...userInfo } = user;
       const extraFields = userInfo && Object.keys(userInfo);
       return (
-        <Card vertical key={id} classes={["User"]}>
+        <Card
+          vertical
+          key={id}
+          classes={["User"]}
+          onKeyDown={e => this.onKeyDown(e)}
+          tabIndex={tabIndex}
+          onFocus={onFocus}
+          selected={selected}
+        >
           <div className="row">
             <Icon icon="user" size="m" />
             <div className="main-info">
@@ -109,14 +140,12 @@ class UserList extends PureComponent {
             <Fragment>
               {this.renderUserFields(extraFields)}
               {this.renderUserFields(Object.keys(address), address)}
-                <Button classes={["contact-button"]}>
-              <a href={`tel:${this.phoneNumber}`}>
-                  {
-                    user.phone
-                  }
-                  <Icon icon="mobile" size="s" color="secondary"/>
-              </a>
-                </Button>
+              <Button classes={["contact-button"]} tabIndex="-1">
+                <a href={`tel:${this.phoneNumber}`} tabIndex="-1">
+                  {user.phone}
+                  <Icon icon="mobile" size="s" color="secondary" />
+                </a>
+              </Button>
             </Fragment>
           ) : (
             ""
@@ -128,4 +157,4 @@ class UserList extends PureComponent {
   }
 }
 
-export default UserList;
+export default User;

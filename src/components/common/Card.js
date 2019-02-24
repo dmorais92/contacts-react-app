@@ -22,11 +22,31 @@ class Card extends PureComponent {
     vertical: false
   };
 
+  constructor(props) {
+    super(props);
+    this.cardRef = React.createRef();
+  }
+
+  componentDidUpdate() {
+    if (this.props.selected) {
+      this.cardRef.current.focus();
+    }
+  }
+
+
   render() {
     const { children, classes, vertical, ...otherProps } = this.props;
     const classNames = [(vertical && "vertical") || null, ...classes];
 
-    return <div className={`Card${cx(classNames)}`} {...otherProps}>{children}</div>;
+    return (
+      <div
+        className={`Card${cx(classNames)}`}
+        ref={this.cardRef}
+        {...otherProps}
+      >
+        {children}
+      </div>
+    );
   }
 }
 

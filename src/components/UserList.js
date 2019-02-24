@@ -5,7 +5,7 @@ import Search from "./Search";
 
 class UserList extends PureComponent {
   static propTypes = {
-    users: PropTypes.array,
+    users: PropTypes.array
   };
 
   componentDidMount() {
@@ -15,17 +15,35 @@ class UserList extends PureComponent {
   }
 
   render() {
-    const {users, isFetchingUsers, searchUsers} = this.props;
+    const {
+      users,
+      isFetchingUsers,
+      searchUsers,
+      selectedUser,
+      selectUser,
+      selectNextUser,
+      selectPreviousUser
+    } = this.props;
 
     return (
       <Fragment>
-        <Search onChange={(e) => searchUsers(e.target.value)}/>
-        {
-          users && users.length ?
-            users.map(user => <User user={user} key={user.name}/>)
-          :
-            <h3>{isFetchingUsers ? 'Loading contacts...' : 'No contacts found'}</h3>
-        }
+        <Search onChange={e => searchUsers(e.target.value)} />
+        {users && users.length ? (
+          users.map((user, i) => (
+            <User
+              tabIndex="0"
+              user={user}
+              key={user.name}
+              keyboardControls={{ selectNextUser, selectPreviousUser }}
+              selected={selectedUser === i}
+              onFocus={() => selectUser(i)}
+            />
+          ))
+        ) : (
+          <h3>
+            {isFetchingUsers ? "Loading contacts..." : "No contacts found"}
+          </h3>
+        )}
       </Fragment>
     );
   }
