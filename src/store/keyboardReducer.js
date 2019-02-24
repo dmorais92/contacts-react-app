@@ -23,7 +23,7 @@ export default function users(
         selectedUser:
           state.selectedUser === null
             ? 0
-            : state.selectedUser === state.userList.length
+            : state.selectedUser === state.userList.length -1
             ? 0
             : state.selectedUser + 1
       };
@@ -32,16 +32,16 @@ export default function users(
         ...state,
         selectedUser:
           state.selectedUser === null
-            ? state.userList.length
+            ? state.userList.length - 1
             : state.selectedUser === 0
-              ? state.userList.length
-              : state.selectedUser - 1
+            ? state.userList.length -1
+            : state.selectedUser - 1
       };
     case ACTION_TYPES.KEYBOARD.SELECT_USER:
       return {
         ...state,
-        selectedUser: action.index || null,
-      }
+        selectedUser: action.index || null
+      };
     default:
       return state;
   }

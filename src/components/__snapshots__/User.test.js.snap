@@ -14,9 +14,9 @@ exports[`renders a user 1`] = `
     <div
       className="main-info"
     >
-      <h3>
+      <h4>
         Leanne Graham
-      </h3>
+      </h4>
       <span>
         Sincere@april.biz
       </span>

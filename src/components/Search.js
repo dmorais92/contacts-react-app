@@ -8,7 +8,7 @@ import "./Search.scss";
 class Search extends PureComponent {
   static propTypes = {
     classes: PropTypes.array,
-    onChange: PropTypes.func,
+    onChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -25,7 +25,11 @@ class Search extends PureComponent {
           <Icon icon="search" size="xs" />
           <h4>Search</h4>
         </div>
-        <input className={`Search${cx(classNames)}`} onChange={e => onChange(e)}{...otherProps} />
+        <input
+          className={`Search${cx(classNames)}`}
+          onChange={e => onChange(e)}
+          {...otherProps}
+        />
       </div>
     );
   }

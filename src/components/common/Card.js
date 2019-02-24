@@ -27,13 +27,14 @@ class Card extends PureComponent {
     this.cardRef = React.createRef();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.props.selected) {
-      this.cardRef.current.focus();
-      window.scrollTo(0, this.cardRef.current.offsetTop)
+      window.scrollTo(0, this.cardRef.current.offsetTop - 100);
+      if(!prevProps.selected) {
+        this.cardRef.current.focus();
+      }
     }
   }
-
 
   render() {
     const { children, classes, vertical, ...otherProps } = this.props;

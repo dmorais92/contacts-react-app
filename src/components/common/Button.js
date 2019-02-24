@@ -12,19 +12,23 @@ class Button extends PureComponent {
       PropTypes.element,
       PropTypes.array
     ]),
-    classes: PropTypes.array,
+    classes: PropTypes.array
   };
 
   static defaultProps = {
     children: null,
-    classes: [],
+    classes: []
   };
 
   render() {
     const { children, classes, ...otherProps } = this.props;
     const classNames = [...classes];
 
-    return <button className={`Button${cx(classNames)}`} {...otherProps}>{children}</button>;
+    return (
+      <button className={`Button${cx(classNames)}`} {...otherProps}>
+        {children}
+      </button>
+    );
   }
 }
 

@@ -18,6 +18,7 @@ class UserList extends PureComponent {
     const {
       users,
       isFetchingUsers,
+      error,
       searchUsers,
       selectedUser,
       selectUser,
@@ -41,7 +42,7 @@ class UserList extends PureComponent {
           ))
         ) : (
           <h3>
-            {isFetchingUsers ? "Loading contacts..." : "No contacts found"}
+            {isFetchingUsers ? "Loading contacts..." : error || "No contacts found"}
           </h3>
         )}
       </Fragment>

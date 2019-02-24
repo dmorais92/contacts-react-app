@@ -9,7 +9,7 @@ export default function chunk(array, chunks) {
         if (array.indexOf(array[arrayItterator + i]) !== -1) {
           chunk.push(array[arrayItterator + i]);
         }
-        i ++;
+        i++;
       }
       if (chunk.length) {
         result.push(chunk);

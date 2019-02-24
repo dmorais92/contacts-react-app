@@ -42,7 +42,7 @@ class User extends Component {
       website: PropTypes.string,
       company: PropTypes.object
     }),
-    selected: PropTypes.bool,
+    selected: PropTypes.bool
   };
 
   constructor(props) {
@@ -83,10 +83,10 @@ class User extends Component {
         : this.setState({ expanded: true });
     }
     if (e.keyCode === 37) {
-      this.setState({expanded: false})
+      this.setState({ expanded: false });
     }
     if (e.keyCode === 39) {
-      this.setState({expanded: true})
+      this.setState({ expanded: true });
     }
     if (e.keyCode === 40) {
       e.preventDefault();
@@ -98,12 +98,17 @@ class User extends Component {
     }
   }
 
+  expandCard() {
+    const {expanded} = this.state;
+    this.setState({expanded: !expanded})
+  }
+
   renderExpandButton() {
     const { expanded } = this.state;
     return (
       <Icon
         icon={expanded ? "close" : "open"}
-        onClick={() => this.setState({ expanded: !expanded })}
+        onClick={() => this.expandCard()}
       />
     );
   }
@@ -132,7 +137,7 @@ class User extends Component {
           <div className="row">
             <Icon icon="user" size="m" />
             <div className="main-info">
-              <h3>{name}</h3>
+              <h4>{name}</h4>
               <span>{email}</span>
               <span>{username}</span>
             </div>
