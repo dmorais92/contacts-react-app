@@ -2,6 +2,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This project was built with React+Redux and is a lightweight contact list with nearly no dependencies.
 Used Axios as an HTTP Client.
+**Search by name, email or username available.**
 
 ## Keyboard Controls
 - Click on an item or press tab twice to toggle the contact list.
